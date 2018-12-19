@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Editor from './components/Editor';
+import Preview from './components/Preview';
 
 class App extends Component {
+  state = {
+    markdownValue: '# sample h1'
+  };
+
+  handleChange = e => {
+    this.setState({
+      markdownValue: e.target.value
+    });
+  };
+
   render() {
+    const { markdownValue } = this.state;
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1>Markdown Previewer</h1>
+        <main>
+          <Editor onChange={this.handleChange} markdownValue={markdownValue} />
+          <Preview markdownValue={markdownValue} />
+        </main>
       </div>
     );
   }
