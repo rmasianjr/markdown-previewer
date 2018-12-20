@@ -1,21 +1,22 @@
 .Card {
-  min-height: 80vh;
-  border: 2px solid #282c34;
+  border: 3px solid #eff5ff;
   min-width: 15rem;
-  width: 50rem;
+  width: 55rem;
   border-radius: 5px;
   margin: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
 
 .Card-header {
   padding: 0.5rem;
-  background: #2c3e50;
+  background: #eff5ff;
   display: flex;
   justify-content: space-between;
 }
 
 .Card-header-title {
-  color: #fff;
+  color: #247ba0;
+  font-weight: bold;
 }
 
 .Card-header-circles span {
@@ -36,4 +37,10 @@
 
 .circle-3 {
   background: #7ed56f;
+}
+
+@media screen and (max-width: 700px) {
+  .Card {
+    width: 95%;
+  }
 }

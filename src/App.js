@@ -20,7 +20,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>Markdown Previewer</h1>
+        <h1 className="App-title"> &mdash;Markdown Previewer&mdash;</h1>
         <main className="App-content">
           <Card title="Editor">
             <Editor
