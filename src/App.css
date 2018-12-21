@@ -1,13 +1,14 @@
 .App-title {
   text-align: center;
   font-size: 4rem;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
-    0px 18px 23px rgba(0, 0, 0, 0.4);
+    0px 13px 18px rgba(0, 0, 0, 0.4);
   margin: 0;
   padding: 3rem 0;
   background: #247ba0;
   color: #eff5ff;
+  text-transform: uppercase;
 }
 
 .App-content {
@@ -26,6 +27,8 @@
   font-family: inherit;
   font-size: inherit;
   color: #777;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
+    monospace;
 }
 
 #preview {
@@ -34,6 +37,49 @@
   padding: 1rem;
   height: 70vh;
   background: #fff;
+}
+
+/* markdown styles */
+#preview h1,
+#preview h2 {
+  border-bottom: 1px solid #ccc;
+}
+
+#preview code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background: #d8e6ff;
+  padding: 0 3px;
+  color: #555;
+  border-radius: 3px;
+}
+
+#preview pre {
+  background: #d8e6ff;
+  padding: 5px 0 5px 5px;
+  line-height: 1.45;
+  overflow: auto;
+  color: #555;
+  border-radius: 3px;
+}
+
+#preview blockquote {
+  border-left: 3px solid #d8e6ff;
+  padding: 0 1rem;
+}
+
+#preview table {
+  border-collapse: collapse;
+}
+
+#preview tbody tr:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+#preview td,
+#preview th {
+  border: 1px solid #ccc;
+  padding: 0.6rem 1.3rem;
 }
 
 @media screen and (max-width: 700px) {
