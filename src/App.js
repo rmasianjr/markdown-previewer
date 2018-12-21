@@ -3,6 +3,7 @@ import './App.css';
 import Editor from './components/Editor';
 import Preview from './components/Preview';
 import Card from './components/Card/Card';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
   state = {
@@ -32,6 +33,7 @@ class App extends Component {
             <Preview markdownValue={markdownValue} />
           </Card>
         </main>
+        <Footer />
       </div>
     );
   }
